@@ -9,16 +9,21 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "x",
+						"name": "_a",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "y",
+						"name": "_b",
 						"type": "uint256"
 					}
 				],
-				"name": "add",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "a",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -26,23 +31,12 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "y",
-						"type": "uint256"
-					}
-				],
-				"name": "sub",
+				"inputs": [],
+				"name": "b",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -50,7 +44,14 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "callParent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -67,7 +68,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/03_Functions.sol": "functions"
+			"contract/12_Inheritance.sol": "Son2"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -81,12 +82,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/03_Functions.sol": {
-			"keccak256": "0x3a5fb6db7c6f9917c5fb886b9dadfaacccfa7d3099c79f0a521a1bceace83f84",
+		"contract/12_Inheritance.sol": {
+			"keccak256": "0x28178e3fdfa42f08085258537b07913ea1a9704e4554a643b593a08e45c34438",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ba4d54c8b0831333ce53be4a04bb90001dc63900f6aac998ebf5cfb06e05e49c",
-				"dweb:/ipfs/Qmc1hohp2uSKDFAa7yrPo5uDKvuYnTinAgZARpzCQ6AxqA"
+				"bzz-raw://e8f37cff10c2828fd6aab42d7c23d665db0155a4450941eb3c587843f461b643",
+				"dweb:/ipfs/QmWjJsq2GoqvXB2U6nSxxJ871DPZ76WeoyURfgBDNSv4EJ"
 			]
 		}
 	},

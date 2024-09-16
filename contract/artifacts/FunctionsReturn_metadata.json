@@ -72,7 +72,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/4_FunctionsReturn.sol": "FunctionsReturn"
+			"contract/04_FunctionsReturn.sol": "FunctionsReturn"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -86,7 +86,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/4_FunctionsReturn.sol": {
+		"contract/04_FunctionsReturn.sol": {
 			"keccak256": "0xd7204177ca3fe1b3e3e5bb0496880c33f9ac31b42090e39e7821152c49494b31",
 			"license": "MIT",
 			"urls": [

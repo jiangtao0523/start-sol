@@ -6,19 +6,21 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "doWhileTest",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "y",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "add",
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "forLoopTest",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -33,16 +35,24 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "y",
+						"name": "_number",
 						"type": "uint256"
 					}
 				],
-				"name": "sub",
+				"name": "ifElseTest",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "whileTest",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -67,7 +77,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/03_Functions.sol": "functions"
+			"contract/09_ControlFlow.sol": "ControlFlow"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -81,12 +91,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/03_Functions.sol": {
-			"keccak256": "0x3a5fb6db7c6f9917c5fb886b9dadfaacccfa7d3099c79f0a521a1bceace83f84",
+		"contract/09_ControlFlow.sol": {
+			"keccak256": "0xb9177e779e8af1df405d0fa0b302b1f7b315d46cd16c0f9fa5fcb3b323f17aca",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ba4d54c8b0831333ce53be4a04bb90001dc63900f6aac998ebf5cfb06e05e49c",
-				"dweb:/ipfs/Qmc1hohp2uSKDFAa7yrPo5uDKvuYnTinAgZARpzCQ6AxqA"
+				"bzz-raw://bff82ce04659e5213a3582e1ea997bebde8445bf39d3120cf56f8530406a4f0b",
+				"dweb:/ipfs/QmV6voP8yyit2eXPXeQD3QVJd7ehoFCQ3yswXPyBzxjk9o"
 			]
 		}
 	},

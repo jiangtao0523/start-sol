@@ -1,0 +1,73 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "bar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/12_Inheritance.sol": "people"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/12_Inheritance.sol": {
+			"keccak256": "0x96b6e6c6a5623b84c54909ad826649e6cfdc5e6ac1b8064d0a3e03670eb1184d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e78f635583799aaa33cd3ab6017504a83c5c7fe944faa4fbdd9ffe60bd10ae1",
+				"dweb:/ipfs/QmQGiAL7YRM5Zb952WbW2XptKpb4EP5YphqqH4UxegEGhs"
+			]
+		}
+	},
+	"version": 1
+}

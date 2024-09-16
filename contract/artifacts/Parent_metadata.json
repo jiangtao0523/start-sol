@@ -6,13 +6,24 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [],
-				"name": "myString",
+				"name": "a",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -32,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/01_HelloWorld.sol": "HelloWorld"
+			"contract/12_Inheritance.sol": "Parent"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -46,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/01_HelloWorld.sol": {
-			"keccak256": "0x0e7873bd34c07d239388dd2720c4c00b747a1c41965391b39582646e4177b9d3",
+		"contract/12_Inheritance.sol": {
+			"keccak256": "0xd38276006e9fe92633e7e2775be010ff763edda66e338d30df5a0ae6a4315fab",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fd89f9f7eea57b5a8ecd66a751c00a09fca58f6fbcb06d9b47c5bfbdd0ea9619",
-				"dweb:/ipfs/QmUqzg9L8DKmuV6C1Yb2tUtuLfebsNnehLfg5UgVrfUxqo"
+				"bzz-raw://cca99656c23e5a6a98ff04caa5f741ce91500e7d546acd1becc93717c1eec780",
+				"dweb:/ipfs/QmRtYSij5iWthKDEAsRcTArwa8peYacsVavkMM7zDJBvY3"
 			]
 		}
 	},
