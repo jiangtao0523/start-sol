@@ -6,6 +6,7 @@
 	"output": {
 		"abi": [],
 		"devdoc": {
+			"details": "String operations.",
 			"kind": "dev",
 			"methods": {},
 			"version": 1
@@ -18,7 +19,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/32_ERC721.sol": "Strings"
+			"common/Strings.sol": "Strings"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -32,12 +33,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/32_ERC721.sol": {
-			"keccak256": "0x00337adabb58b5ea28182a3e39a8690ae199f11b754171dc1da6504767d08386",
+		"common/Strings.sol": {
+			"keccak256": "0x8d89356923d89b6589da32cb8ac463a4c0226b6e1c210efc4fa5cd1a047b031f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e259436bce88f8c57872ce693ab4e39371c5516ff3a3b4aa2d1ce75669eace75",
-				"dweb:/ipfs/QmXdxnrvVw2PiV136S35L6SSMHoeDohTfW17DUfHmw6NfT"
+				"bzz-raw://adc02e27b4a5ad604591f5faae7570aede53f8a95bc20f7f5ccaa5968a311c23",
+				"dweb:/ipfs/QmToimfPApwEnTHReVug9aN8e4bhRfkJJovozqQTjuXZv6"
 			]
 		}
 	},

@@ -1,0 +1,136 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "SendToken",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "amountAllowed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "requestToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "requestedAddress",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/30_Faucet.sol": "Faucet"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/29_ERC20.sol": {
+			"keccak256": "0xcf2528f11b80921452dbb0707a2cc5ae5518e8b86a59c9ba54c045aec2103b6e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://667b063b1d650edcf2af419e2b47bbf0eeabeb67baa4281e9a0c73d9d2ff1100",
+				"dweb:/ipfs/QmSYuRH4UYCSRH6g2Qnate6Dn8WtST3wQXPRvdoKVE7SXU"
+			]
+		},
+		"contract/30_Faucet.sol": {
+			"keccak256": "0x978be2c8e9e169e5b659437e2601e314337fad83947eeb15edd7c8f0e882370f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a07463ad2761a3464ced4875df493127b16b7ccd0fe7569ab83f23e1382b5542",
+				"dweb:/ipfs/QmX96sYatej5y5zWx2zgimgQp1ZpYfVUwut9ZrcWDgi6uy"
+			]
+		}
+	},
+	"version": 1
+}

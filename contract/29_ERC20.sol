@@ -7,10 +7,10 @@ interface IERC20 {
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     // value单位货币从from账户授权给to账户
-    event Approval(address indexed from, address indexed to, uint256 value)
+    event Approval(address indexed from, address indexed to, uint256 value);
 
     // 返回代币总供给
-    function totalSupply() external view returns(uint256);
+    function totalSupply() external view returns (uint256);
 
     // 返回账户所持有的代币数
     function balanceOf(address account) external view returns(uint256);
@@ -31,11 +31,11 @@ interface IERC20 {
 
 contract ERC20 is IERC20 {
 
-    mapping(address => uint256) public balanceOf;
+    mapping(address => uint256) public override balanceOf;
 
-    mapping(address => mapping(address => uint256)) public allowance;
+    mapping(address => mapping(address => uint256)) public override allowance;
 
-    uint256 public totalSupply;
+    uint256 public override totalSupply;
 
     string public name; // 代号
     string public symbol;   // 符号
@@ -49,13 +49,40 @@ contract ERC20 is IERC20 {
     }
 
     // 代币转账逻辑
-    function transfer(address recipient, uint256 amount) public override return(bool) {
+    function transfer(address recipient, uint256 amount) public override returns(bool) {
         balanceOf[msg.sender] -= amount;
         balanceOf[recipient] += amount;
         emit Transfer(msg.sender, recipient, amount);
         return true;
     }
 
-    function approve(address spender, uint256 amount) public override
+    // 代币授权逻辑
+    function approve(address spender, uint256 amount) public override returns(bool) {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    // 授权转账 msg.sender是第三方 sender是授权方。由第三方调用这个方法对代币进行做交易
+    function transferFrom(address sender, address recipient, uint256 amount) public override returns(bool) {
+        // 这里其实不够严谨  应该要先判断以下授权方给第三方授权的额度 够不够此次转账
+        allowance[sender][msg.sender] -= amount;
+        balanceOf[sender] -= amount;
+        balanceOf[recipient] += amount;
+        emit Transfer(sender, recipient, amount);
+        return true;
+    }
+
+    function mint(uint amount) external {
+        balanceOf[msg.sender] += amount;
+        totalSupply += amount;
+        emit Transfer(address(0), msg.sender, amount);
+    }
+
+    function burn(uint amount) external {
+        balanceOf[msg.sender] -= amount;
+        totalSupply -= amount;
+        emit Transfer(msg.sender, address(0), amount);
+    }
 
 }

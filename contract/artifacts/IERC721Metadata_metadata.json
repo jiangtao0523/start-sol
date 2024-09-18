@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/32_ERC721.sol": "IERC721Metadata"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"common/Strings.sol": {
+			"keccak256": "0x8d89356923d89b6589da32cb8ac463a4c0226b6e1c210efc4fa5cd1a047b031f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://adc02e27b4a5ad604591f5faae7570aede53f8a95bc20f7f5ccaa5968a311c23",
+				"dweb:/ipfs/QmToimfPApwEnTHReVug9aN8e4bhRfkJJovozqQTjuXZv6"
+			]
+		},
+		"contract/32_ERC721.sol": {
+			"keccak256": "0xc3fc862a6c4bc0779af037a66a154aca8ef982901c4060872c96e27195722d81",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e8a6f0dd8e3a79d27ee727cefb2c020254cf36895a3eccafd6b668f75e91f42a",
+				"dweb:/ipfs/QmULKtQiJtje6yZs9RFMpspNhhogeXVvpUMnxEnXnZL7Ho"
+			]
+		}
+	},
+	"version": 1
+}

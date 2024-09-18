@@ -1,0 +1,127 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "getSum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "sum",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multiTransferETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multiTransferToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "withdrawFromFailList",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/31_Airdrop.sol": "Airdrop"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/29_ERC20.sol": {
+			"keccak256": "0xcf2528f11b80921452dbb0707a2cc5ae5518e8b86a59c9ba54c045aec2103b6e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://667b063b1d650edcf2af419e2b47bbf0eeabeb67baa4281e9a0c73d9d2ff1100",
+				"dweb:/ipfs/QmSYuRH4UYCSRH6g2Qnate6Dn8WtST3wQXPRvdoKVE7SXU"
+			]
+		},
+		"contract/31_Airdrop.sol": {
+			"keccak256": "0xfca767865a09398fbf3134dc1f726969103da3c89bd70821bf969fa094ac3088",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://376d113d9c71094d62500cef95dccaf27690bb959401b6e8830b08ab38a96888",
+				"dweb:/ipfs/QmY58RNxrVJnVn6E1xvM8W3PuSR2XSVHdQ33esA5g6j36D"
+			]
+		}
+	},
+	"version": 1
+}
