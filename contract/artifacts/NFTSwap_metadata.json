@@ -11,13 +11,13 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "owner",
+						"name": "seller",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "approved",
+						"name": "nftAddr",
 						"type": "address"
 					},
 					{
@@ -25,34 +25,15 @@
 						"internalType": "uint256",
 						"name": "tokenId",
 						"type": "uint256"
-					}
-				],
-				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
 					},
 					{
 						"indexed": false,
-						"internalType": "bool",
-						"name": "approved",
-						"type": "bool"
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
 					}
 				],
-				"name": "ApprovalForAll",
+				"name": "List",
 				"type": "event"
 			},
 			{
@@ -61,13 +42,44 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "from",
+						"name": "buyer",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "to",
+						"name": "nftAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "Purchase",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "nftAddr",
 						"type": "address"
 					},
 					{
@@ -77,23 +89,63 @@
 						"type": "uint256"
 					}
 				],
-				"name": "Transfer",
+				"name": "Revoke",
 				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "nftAddr",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "Update",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "to",
+						"name": "_nftAddress",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
 						"type": "uint256"
 					}
 				],
-				"name": "approve",
+				"name": "list",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -102,93 +154,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "balance",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "getApproved",
-				"outputs": [
-					{
-						"internalType": "address",
 						"name": "operator",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
 						"type": "address"
 					},
-					{
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
-					}
-				],
-				"name": "isApprovedForAll",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "ownerOf",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
 					{
 						"internalType": "address",
 						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
 						"type": "address"
 					},
 					{
@@ -202,70 +173,79 @@
 						"type": "bytes"
 					}
 				],
-				"name": "safeTransferFrom",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
-					},
-					{
-						"internalType": "bool",
-						"name": "_approved",
-						"type": "bool"
-					}
-				],
-				"name": "setApprovalForAll",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
+				"name": "onERC721Received",
+				"outputs": [
 					{
 						"internalType": "bytes4",
-						"name": "interfaceId",
+						"name": "",
 						"type": "bytes4"
 					}
 				],
-				"name": "supportsInterface",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
+						"name": "_nftAddress",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "_tokenId",
 						"type": "uint256"
 					}
 				],
-				"name": "transferFrom",
+				"name": "purchase",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "revoke",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -281,7 +261,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/32_ERC721.sol": "IERC721"
+			"contract/36_NFTSwap.sol": "NFTSwap"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -304,11 +284,19 @@
 			]
 		},
 		"contract/32_ERC721.sol": {
-			"keccak256": "0xece80715c8c2c249e2e4f2cb0a90b1dc5cde1503efd9529c5cbdcd10000ae324",
+			"keccak256": "0xdef2ee9479b7bf41fd183a9d322035d840970c490c0a7a662bd9dacb642dfca4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d3355c49fde8df442a71e4b11234394213daca5ec0a61ac7ddab377168f0ae36",
-				"dweb:/ipfs/QmYWFth45iSgZixNt6VWEn2VxRwsGCGmHR3ytyHtwKygVd"
+				"bzz-raw://2bbc6dd0e2e242bd6a4c461265ef767fdace7edb43c49b92f6cc9bdc96461a17",
+				"dweb:/ipfs/QmbwKn8HBQ65fuSskerDKmtHyxv8ego1YwucT5iXRUxwwu"
+			]
+		},
+		"contract/36_NFTSwap.sol": {
+			"keccak256": "0x9524958acdd2867ec2ea7f8990a4a35736e797b8a6305b60df9425cd85543d2d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b37abcf3b3e0e1fc7ec3d9fad5e211cb5b67472dececedad73ba6a885cdaedd5",
+				"dweb:/ipfs/QmeuAFqNeTUFNwx1p7BUhAnW9VdvnKzUYCbX1X8unUV99q"
 			]
 		}
 	},

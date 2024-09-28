@@ -9,13 +9,18 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "name_",
+						"name": "name",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "symbol_",
+						"name": "symbol",
 						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "merkleroot",
+						"type": "bytes32"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -188,6 +193,48 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "proof",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "mintedAddress",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -214,6 +261,19 @@
 						"internalType": "address",
 						"name": "owner",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "root",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
 					}
 				],
 				"stateMutability": "view",
@@ -376,7 +436,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/32_ERC721.sol": "ERC721"
+			"contract/34_MerkleTree.sol": "MerkleTree"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -404,6 +464,14 @@
 			"urls": [
 				"bzz-raw://d3355c49fde8df442a71e4b11234394213daca5ec0a61ac7ddab377168f0ae36",
 				"dweb:/ipfs/QmYWFth45iSgZixNt6VWEn2VxRwsGCGmHR3ytyHtwKygVd"
+			]
+		},
+		"contract/34_MerkleTree.sol": {
+			"keccak256": "0xd9e516769ff268b733fe7e4e17ade41598c8121ecc56ce99db4fd2d9f3fad4eb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2bd42c302cc61be96230d7eefa4dfaf6b487048dc71b70835a32845f609fa5ac",
+				"dweb:/ipfs/QmSdBvuQprkTd6R8QwqLrtwoCRXCVkEicadbc4vvFbsH8x"
 			]
 		}
 	},

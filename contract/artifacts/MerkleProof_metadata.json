@@ -4,27 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [
-					{
-						"internalType": "bytes4",
-						"name": "interfaceId",
-						"type": "bytes4"
-					}
-				],
-				"name": "supportsInterface",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -38,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/32_ERC721.sol": "IERC165"
+			"contract/34_MerkleTree.sol": "MerkleProof"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -66,6 +46,14 @@
 			"urls": [
 				"bzz-raw://d3355c49fde8df442a71e4b11234394213daca5ec0a61ac7ddab377168f0ae36",
 				"dweb:/ipfs/QmYWFth45iSgZixNt6VWEn2VxRwsGCGmHR3ytyHtwKygVd"
+			]
+		},
+		"contract/34_MerkleTree.sol": {
+			"keccak256": "0xd9e516769ff268b733fe7e4e17ade41598c8121ecc56ce99db4fd2d9f3fad4eb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2bd42c302cc61be96230d7eefa4dfaf6b487048dc71b70835a32845f609fa5ac",
+				"dweb:/ipfs/QmSdBvuQprkTd6R8QwqLrtwoCRXCVkEicadbc4vvFbsH8x"
 			]
 		}
 	},

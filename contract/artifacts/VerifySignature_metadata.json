@@ -1,0 +1,192 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_messageHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "getEthSignedMessageHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getMessageHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_ethSignedMessageHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "recoverSigner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "splitSignature",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "r",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "s",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "v",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_signer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signature",
+						"type": "bytes"
+					}
+				],
+				"name": "verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/35_Signature.sol": "VerifySignature"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"common/Strings.sol": {
+			"keccak256": "0x8d89356923d89b6589da32cb8ac463a4c0226b6e1c210efc4fa5cd1a047b031f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://adc02e27b4a5ad604591f5faae7570aede53f8a95bc20f7f5ccaa5968a311c23",
+				"dweb:/ipfs/QmToimfPApwEnTHReVug9aN8e4bhRfkJJovozqQTjuXZv6"
+			]
+		},
+		"contract/32_ERC721.sol": {
+			"keccak256": "0xece80715c8c2c249e2e4f2cb0a90b1dc5cde1503efd9529c5cbdcd10000ae324",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d3355c49fde8df442a71e4b11234394213daca5ec0a61ac7ddab377168f0ae36",
+				"dweb:/ipfs/QmYWFth45iSgZixNt6VWEn2VxRwsGCGmHR3ytyHtwKygVd"
+			]
+		},
+		"contract/35_Signature.sol": {
+			"keccak256": "0xd52f4d29d69709fcdd126496175ae2f60e0277a35d48ecfc6a6bd886f48e72af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://65911456748d5c33d5b7b8353d5184df7fa4baab77565000fc178ba7726d2b94",
+				"dweb:/ipfs/QmU75CDBTtv6suiFnUApQpUmZ9ULRDx4HWW1Hfj7z6dQeC"
+			]
+		}
+	},
+	"version": 1
+}

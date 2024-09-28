@@ -9,13 +9,18 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "name_",
+						"name": "_name",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "symbol_",
+						"name": "_symbol",
 						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_signer",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -167,6 +172,30 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getMessageHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "owner",
 						"type": "address"
 					},
@@ -177,6 +206,48 @@
 					}
 				],
 				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "mintedAddress",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -289,6 +360,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "signer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes4",
@@ -361,6 +445,34 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_msgHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -376,7 +488,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/32_ERC721.sol": "ERC721"
+			"contract/35_Signature.sol": "SignatureNFT"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -404,6 +516,14 @@
 			"urls": [
 				"bzz-raw://d3355c49fde8df442a71e4b11234394213daca5ec0a61ac7ddab377168f0ae36",
 				"dweb:/ipfs/QmYWFth45iSgZixNt6VWEn2VxRwsGCGmHR3ytyHtwKygVd"
+			]
+		},
+		"contract/35_Signature.sol": {
+			"keccak256": "0xd52f4d29d69709fcdd126496175ae2f60e0277a35d48ecfc6a6bd886f48e72af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://65911456748d5c33d5b7b8353d5184df7fa4baab77565000fc178ba7726d2b94",
+				"dweb:/ipfs/QmU75CDBTtv6suiFnUApQpUmZ9ULRDx4HWW1Hfj7z6dQeC"
 			]
 		}
 	},
